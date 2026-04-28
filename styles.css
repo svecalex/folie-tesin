@@ -346,6 +346,10 @@ a:hover {
   filter: brightness(0.3) saturate(0.7);
 }
 
+.hero-bg img.hero-bg-green {
+  filter: brightness(0.28) saturate(1.05) hue-rotate(88deg) contrast(1.02);
+}
+
 .hero-bg::after {
   content: '';
   position: absolute;
@@ -685,6 +689,14 @@ a:hover {
   color: var(--accent);
 }
 
+.advantage-icon svg,
+.contact-icon svg,
+.cta-actions .btn svg[data-lucide] {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2.2;
+}
+
 .advantage-text h4 {
   font-size: 1.05rem;
   font-weight: 700;
@@ -950,6 +962,7 @@ a:hover {
 .pricing-table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .pricing-table thead th {
@@ -1057,6 +1070,53 @@ a:hover {
   z-index: 1;
 }
 
+.gallery-carousel-controls {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: -8px 0 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.gallery-carousel-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid var(--border-accent);
+  background: rgba(57, 255, 20, 0.06);
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.gallery-carousel-btn:hover:not(:disabled) {
+  background: rgba(57, 255, 20, 0.14);
+  box-shadow: var(--shadow-glow);
+}
+
+.gallery-carousel-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.gallery-carousel-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.gallery-carousel-status {
+  min-width: 84px;
+  text-align: center;
+  font-size: 0.82rem;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+}
+
 .gallery-item {
   position: relative;
   border-radius: var(--radius-md);
@@ -1103,6 +1163,10 @@ a:hover {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--text-primary);
+}
+
+.contact-icon svg {
+  color: var(--accent);
 }
 
 /* Lightbox */
@@ -1841,8 +1905,38 @@ a:hover {
     grid-template-columns: 1fr;
   }
   
+  .gallery-carousel-controls {
+    display: flex;
+  }
+
   .gallery-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--container-padding);
+    padding: 0 0 12px;
+    margin: 0 calc(var(--container-padding) * -1);
+    padding-inline: var(--container-padding);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .gallery-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gallery-item {
+    flex: 0 0 min(86vw, 420px);
+    scroll-snap-align: center;
+  }
+
+  .gallery-item:hover {
+    transform: none;
+  }
+
+  .gallery-item-overlay {
+    opacity: 1;
   }
   
   .form-row {
@@ -1870,11 +1964,55 @@ a:hover {
   }
   
   .pricing-table-wrapper {
-    overflow-x: auto;
+    overflow: hidden;
   }
-  
+
   .pricing-table {
-    min-width: 500px;
+    min-width: 0;
+    table-layout: auto;
+  }
+
+  .pricing-table thead {
+    display: none;
+  }
+
+  .pricing-table tbody {
+    display: grid;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .pricing-table tbody tr {
+    display: grid;
+    gap: 10px;
+    padding: 16px;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .pricing-table tbody td {
+    padding: 0;
+    border-bottom: none;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 0.92rem;
+  }
+
+  .pricing-table tbody td::before {
+    content: attr(data-label);
+    flex-shrink: 0;
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .pricing-price {
+    text-align: right;
   }
 
   .hero-actions {
@@ -1972,13 +2110,23 @@ a:hover {
   }
 
   .tint-buttons {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
   }
 
   .tint-btn {
-    width: 100%;
-    max-width: 200px;
+    width: calc(50% - 6px);
+    max-width: 140px;
+  }
+
+  .pricing-table tbody td {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .gallery-item {
+    flex-basis: calc(100vw - 32px);
   }
 }
 

@@ -11,6 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.folietesin.cz">
   <link rel="stylesheet" href="styles.css?v=2">
+  <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2339FF14'/%3E%3Ctext x='16' y='22' font-size='14' font-weight='900' text-anchor='middle' fill='%230a0d0a'%3EFT%3C/text%3E%3C/svg%3E">
 </head>
 <body>
@@ -46,7 +47,7 @@
   <!-- ===== HERO SECTION ===== -->
   <section class="hero" id="hero">
     <div class="hero-bg">
-      <img src="images/tonovani-cervene.jpg" alt="Ferrari s tónovanými skly — Fólie Těšín" loading="eager">
+      <img class="hero-bg-green" src="images/tonovani-cervene.jpg" alt="Zelené sportovní auto s tónovanými skly — Fólie Těšín" loading="eager">
     </div>
 
     <div class="hero-particles" id="heroParticles"></div>
@@ -212,28 +213,28 @@
 
           <div class="advantage-list">
             <div class="advantage-item">
-              <div class="advantage-icon">✓</div>
+              <div class="advantage-icon"><i data-lucide="badge-check"></i></div>
               <div class="advantage-text">
                 <h4>Atest & homologace</h4>
                 <p>Certifikované fólie splňující veškeré české a EU normy. Bezpečný průjezd technickou kontrolou.</p>
               </div>
             </div>
             <div class="advantage-item">
-              <div class="advantage-icon">🛡</div>
+              <div class="advantage-icon"><i data-lucide="shield-check"></i></div>
               <div class="advantage-text">
                 <h4>Doživotní záruka</h4>
                 <p>Na stálost a barevnost fólií poskytujeme doživotní záruku. Investice, která se vyplatí.</p>
               </div>
             </div>
             <div class="advantage-item">
-              <div class="advantage-icon">☀</div>
+              <div class="advantage-icon"><i data-lucide="sun-medium"></i></div>
               <div class="advantage-text">
                 <h4>99% UV ochrana</h4>
                 <p>Fólie zadržují 99% UV záření. Chrání interiér vozu i obyvatele budov před škodlivým zářením.</p>
               </div>
             </div>
             <div class="advantage-item">
-              <div class="advantage-icon">🔧</div>
+              <div class="advantage-icon"><i data-lucide="wrench"></i></div>
               <div class="advantage-text">
                 <h4>Profesionální instalace</h4>
                 <p>Odborně školení technici s letitými zkušenostmi. Precizní práce bez bublin a nedokonalostí.</p>
@@ -279,10 +280,6 @@
       <div class="tint-container reveal">
         <div class="tint-buttons" id="tintButtons">
           <button class="tint-btn active" data-tint="5">5%</button>
-          <button class="tint-btn" data-tint="15">15%</button>
-          <button class="tint-btn" data-tint="20">20%</button>
-          <button class="tint-btn" data-tint="35">35%</button>
-          <button class="tint-btn" data-tint="50">50%</button>
           <button class="tint-btn" data-tint="70">70%</button>
         </div>
 
@@ -411,36 +408,36 @@
           </thead>
           <tbody>
             <tr>
-              <td>3-dveřové (hatchback)</td>
-              <td class="pricing-price">od 2 300 Kč</td>
+              <td data-label="Typ vozidla">3-dveřové (hatchback)</td>
+              <td class="pricing-price" data-label="Cena">od 2 300 Kč</td>
             </tr>
             <tr>
-              <td>5-dveřové (hatchback)</td>
-              <td class="pricing-price">od 2 800 Kč</td>
+              <td data-label="Typ vozidla">5-dveřové (hatchback)</td>
+              <td class="pricing-price" data-label="Cena">od 2 800 Kč</td>
             </tr>
             <tr>
-              <td>Sedan</td>
-              <td class="pricing-price">od 2 800 Kč</td>
+              <td data-label="Typ vozidla">Sedan</td>
+              <td class="pricing-price" data-label="Cena">od 2 800 Kč</td>
             </tr>
             <tr>
-              <td>Kombi</td>
-              <td class="pricing-price">od 3 000 Kč</td>
+              <td data-label="Typ vozidla">Kombi</td>
+              <td class="pricing-price" data-label="Cena">od 3 000 Kč</td>
             </tr>
             <tr>
-              <td>SUV</td>
-              <td class="pricing-price">od 3 200 Kč</td>
+              <td data-label="Typ vozidla">SUV</td>
+              <td class="pricing-price" data-label="Cena">od 3 200 Kč</td>
             </tr>
             <tr>
-              <td>Dodávka / Van</td>
-              <td class="pricing-price">od 3 500 Kč</td>
+              <td data-label="Typ vozidla">Dodávka / Van</td>
+              <td class="pricing-price" data-label="Cena">od 3 500 Kč</td>
             </tr>
             <tr>
-              <td>Přední čelní pruh</td>
-              <td class="pricing-price">od 500 Kč</td>
+              <td data-label="Typ vozidla">Přední čelní pruh</td>
+              <td class="pricing-price" data-label="Cena">od 500 Kč</td>
             </tr>
             <tr>
-              <td>Sluneční clona</td>
-              <td class="pricing-price">od 400 Kč</td>
+              <td data-label="Typ vozidla">Sluneční clona</td>
+              <td class="pricing-price" data-label="Cena">od 400 Kč</td>
             </tr>
           </tbody>
         </table>
@@ -460,24 +457,24 @@
           </thead>
           <tbody>
             <tr>
-              <td>Sundání stávající fólie</td>
-              <td class="pricing-price">od 500 Kč</td>
+              <td data-label="Doplňková služba">Sundání stávající fólie</td>
+              <td class="pricing-price" data-label="Cena">od 500 Kč</td>
             </tr>
             <tr>
-              <td>Tónování světel (sada)</td>
-              <td class="pricing-price">od 800 Kč</td>
+              <td data-label="Doplňková služba">Tónování světel (sada)</td>
+              <td class="pricing-price" data-label="Cena">od 800 Kč</td>
             </tr>
             <tr>
-              <td>Ochranná fólie na lak (PPF) — Za díl</td>
-              <td class="pricing-price">Dle nacenění</td>
+              <td data-label="Doplňková služba">Ochranná fólie na lak (PPF) — Za díl</td>
+              <td class="pricing-price" data-label="Cena">Dle nacenění</td>
             </tr>
             <tr>
-              <td>Celopolep vozidla</td>
-              <td class="pricing-price">Dle nacenění</td>
+              <td data-label="Doplňková služba">Celopolep vozidla</td>
+              <td class="pricing-price" data-label="Cena">Dle nacenění</td>
             </tr>
             <tr>
-              <td>Protisluneční fólie na budovy</td>
-              <td class="pricing-price">Dle nacenění</td>
+              <td data-label="Doplňková služba">Protisluneční fólie na budovy</td>
+              <td class="pricing-price" data-label="Cena">Dle nacenění</td>
             </tr>
           </tbody>
         </table>
@@ -507,6 +504,16 @@
         <button class="gallery-tab" data-filter="tonovani">Tónování</button>
         <button class="gallery-tab" data-filter="celopolepy">Celopolepy</button>
         <button class="gallery-tab" data-filter="svetla">Světla</button>
+      </div>
+
+      <div class="gallery-carousel-controls reveal" id="galleryCarouselControls" aria-label="Ovládání galerie">
+        <button class="gallery-carousel-btn" id="galleryPrev" aria-label="Předchozí fotografie">
+          <i data-lucide="chevron-left"></i>
+        </button>
+        <div class="gallery-carousel-status" id="galleryCarouselStatus">1 / 12</div>
+        <button class="gallery-carousel-btn" id="galleryNext" aria-label="Další fotografie">
+          <i data-lucide="chevron-right"></i>
+        </button>
       </div>
 
       <div class="gallery-grid reveal" id="galleryGrid">
@@ -675,10 +682,12 @@
       </p>
       <div class="cta-actions">
         <a href="tel:+420605163521" class="btn btn-primary" style="font-size: 1.1rem; padding: 18px 36px;">
-          📞 +420 605 163 521
+          <i data-lucide="phone"></i>
+          +420 605 163 521
         </a>
         <a href="#kontakt" class="btn btn-secondary">
-          ✉ Napsat zprávu
+          <i data-lucide="mail"></i>
+          Napsat zprávu
         </a>
       </div>
     </div>
@@ -794,28 +803,28 @@
       <div class="contact-grid" style="margin-top: 48px;">
         <div class="contact-info reveal">
           <div class="contact-item">
-            <div class="contact-icon">📍</div>
+            <div class="contact-icon"><i data-lucide="map-pinned"></i></div>
             <div>
               <h4>Adresa</h4>
               <p>Rybářská 365<br>Český Těšín — Mosty<br>735 62</p>
             </div>
           </div>
           <div class="contact-item">
-            <div class="contact-icon">📞</div>
+            <div class="contact-icon"><i data-lucide="phone"></i></div>
             <div>
               <h4>Telefon</h4>
               <p><a href="tel:+420605163521">+420 605 163 521</a></p>
             </div>
           </div>
           <div class="contact-item">
-            <div class="contact-icon">✉</div>
+            <div class="contact-icon"><i data-lucide="mail"></i></div>
             <div>
               <h4>E-mail</h4>
               <p><a href="mailto:info@folietesin.cz">info@folietesin.cz</a></p>
             </div>
           </div>
           <div class="contact-item">
-            <div class="contact-icon">🏢</div>
+            <div class="contact-icon"><i data-lucide="building-2"></i></div>
             <div>
               <h4>IČ</h4>
               <p>05127050</p>
@@ -987,12 +996,8 @@
     // TINT SIMULATOR
     // ==========================================
     const tintData = {
-      5:  { opacity: 0.95, desc: 'Nejtmavší, maximální soukromí' },
-      15: { opacity: 0.85, desc: 'Velmi tmavé, populární volba' },
-      20: { opacity: 0.80, desc: 'Tmavé, elegantní vzhled' },
-      35: { opacity: 0.65, desc: 'Střední tmavost, univerzální' },
-      50: { opacity: 0.50, desc: 'Lehké ztmavení, přirozený look' },
-      70: { opacity: 0.30, desc: 'Nejsvětlejší, téměř průhledné' }
+      5:  { opacity: 0.95, desc: 'Nejtmavší varianta pro maximální soukromí' },
+      70: { opacity: 0.16, desc: 'Téměř čiré sklo bez výrazného zatmavení' }
     };
 
     const tintButtons = document.querySelectorAll('.tint-btn');
@@ -1052,6 +1057,47 @@
     // ==========================================
     const galleryTabs = document.querySelectorAll('.gallery-tab');
     const galleryItems = document.querySelectorAll('.gallery-item');
+    const galleryGrid = document.getElementById('galleryGrid');
+    const galleryPrev = document.getElementById('galleryPrev');
+    const galleryNext = document.getElementById('galleryNext');
+    const galleryCarouselStatus = document.getElementById('galleryCarouselStatus');
+    let visibleGalleryItems = Array.from(galleryItems);
+    let currentGalleryIndex = 0;
+
+    function updateGalleryStatus() {
+      const total = visibleGalleryItems.length;
+      const current = total ? currentGalleryIndex + 1 : 0;
+      galleryCarouselStatus.textContent = total ? current + ' / ' + total : '0 / 0';
+      galleryPrev.disabled = currentGalleryIndex <= 0;
+      galleryNext.disabled = currentGalleryIndex >= total - 1;
+    }
+
+    function scrollGalleryToIndex(index, smooth = true) {
+      if (!visibleGalleryItems.length) {
+        currentGalleryIndex = 0;
+        updateGalleryStatus();
+        return;
+      }
+
+      currentGalleryIndex = Math.max(0, Math.min(index, visibleGalleryItems.length - 1));
+      const activeItem = visibleGalleryItems[currentGalleryIndex];
+
+      if (window.innerWidth <= 768 && activeItem) {
+        activeItem.scrollIntoView({
+          behavior: smooth ? 'smooth' : 'auto',
+          block: 'nearest',
+          inline: 'center'
+        });
+      }
+
+      updateGalleryStatus();
+    }
+
+    function refreshVisibleGalleryItems(resetIndex = true) {
+      visibleGalleryItems = Array.from(galleryItems).filter(item => item.style.display !== 'none');
+      if (resetIndex) currentGalleryIndex = 0;
+      scrollGalleryToIndex(currentGalleryIndex, false);
+    }
 
     galleryTabs.forEach(tab => {
       tab.addEventListener('click', () => {
@@ -1067,7 +1113,42 @@
             item.style.display = 'none';
           }
         });
+
+        refreshVisibleGalleryItems();
       });
+    });
+
+    galleryPrev.addEventListener('click', () => {
+      scrollGalleryToIndex(currentGalleryIndex - 1);
+    });
+
+    galleryNext.addEventListener('click', () => {
+      scrollGalleryToIndex(currentGalleryIndex + 1);
+    });
+
+    galleryGrid.addEventListener('scroll', () => {
+      if (window.innerWidth > 768 || !visibleGalleryItems.length) return;
+
+      const gridLeft = galleryGrid.getBoundingClientRect().left;
+      let closestIndex = 0;
+      let smallestOffset = Number.POSITIVE_INFINITY;
+
+      visibleGalleryItems.forEach((item, index) => {
+        const offset = Math.abs(item.getBoundingClientRect().left - gridLeft - 12);
+        if (offset < smallestOffset) {
+          smallestOffset = offset;
+          closestIndex = index;
+        }
+      });
+
+      if (closestIndex !== currentGalleryIndex) {
+        currentGalleryIndex = closestIndex;
+        updateGalleryStatus();
+      }
+    }, { passive: true });
+
+    window.addEventListener('resize', () => {
+      scrollGalleryToIndex(currentGalleryIndex, false);
     });
 
     // Lightbox
@@ -1128,7 +1209,7 @@
       e.preventDefault();
       const btn = this.querySelector('button[type="submit"]');
       const originalText = btn.innerHTML;
-      btn.innerHTML = '✓ Odesláno!';
+      btn.innerHTML = 'Odesláno';
       btn.style.background = 'linear-gradient(135deg, #39FF14, #32CD32)';
       setTimeout(() => {
         btn.innerHTML = originalText;
@@ -1183,6 +1264,12 @@
 
     const heroStats = document.querySelector('.hero-stats');
     if (heroStats) statsObserver.observe(heroStats);
+
+    refreshVisibleGalleryItems();
+
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
   </script>
 
 </body>
